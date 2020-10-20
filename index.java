@@ -1,27 +1,40 @@
-int x=50;
-int y=50;
-int r=50;
-int q=50;
-int z=50;
+//x value rect
+int a= (int) random(2,240);
+//y value rect
+int b= (int) random(1,255);
+//length and width rect
+int c= (int) random(50,150);
+//size of ellipse
+int z=12.5;
+//colors for ellipse
+int r= (int) random(1,255);
+int g= (int) random(1,255);
+int b= (int) random(1,255);
 void setup() {
 	size(500, 500);
-}
+  background(255);
+  }
 
 void draw() {
-
-background(255);
+//rect
   stroke(0);
+  fill(r,g,b);
+  rect(a,b,c,c);
 
-  fill(150);
-  rect(x,y,r+150,r+150);
-
-  fill(255);
-  ellipse(z+100,q+100,r,r);
-  q=q+1;
-  z=z+1
+//ellipses
+  int r= (int) random(1,255);
+  int g= (int) random(1,255);
+  int b= (int) random(1,255);
+  fill(r,g,b);
+  ellipse(mouseX+random(-40,40),mouseY-random(-40,40),z,z);
 
   
 
 
-// Step 4: Make it so when the program runs the ball slides off the screen exiting at the point (500, 500)
+
 }
+
+  void mousePressed() {
+    fill(r,g,b);
+    rect(a,b,c,c);
+  }

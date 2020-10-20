@@ -1,0 +1,5 @@
+int r= (int) random(1,255);
+int g= (int) random(1,255);
+int b= (int) random(1,255);
+
+rect(mouseX,mouseY,50,50);
